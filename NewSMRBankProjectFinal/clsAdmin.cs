@@ -9,6 +9,7 @@ namespace NewSMRBankProjectFinal
     {
         private int Id;
         //Id setter getter method
+        //second line commented
         public int ID
         {
             get { return Id; }
