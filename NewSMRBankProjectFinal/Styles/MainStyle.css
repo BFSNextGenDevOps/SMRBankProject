@@ -1,0 +1,555 @@
+﻿/* SMR Bank StyleSheet */
+
+body 
+{
+    color: #000035;
+    background: #f2f2f2;
+    font-size: 12px;
+    font-family: 'Lucida Bright' , Tahoma, Verdana, Arial, Sans-Serif;
+    margin: 0;
+    padding: 0;
+}
+
+a:link, a:visited{ color: #23a7d8; text-decoration: none; }
+a:hover{ text-decoration: underline; }
+
+#Wrapper
+{
+    width: 100%;
+    min-width: 900px;
+    margin: 0 auto;
+    padding: 0 auto;
+}
+
+#Header
+{
+    width: 100%;
+    height: 90px;
+    background: #257eb9 url(/../images/headerBG4.jpg);
+    border-bottom: 5px solid #71cef5;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+#Content
+{
+    width: 80%;
+    min-width: 900px;
+    overflow: hidden;
+    margin: 1% auto;
+    padding: 0 auto;
+}
+
+#Footer
+{
+    clear: both;
+    overflow: hidden;
+    width: 100%;
+    min-width: 900px;
+    background: #e0e0e0; /*d4d5d5*/
+    margin-top: 2%;
+    padding: 1% 0 1.5% 0;
+}
+#Footer .FooterMenu
+{
+    clear: both;
+    overflow: hidden;
+    margin: 0 10%;
+}
+#Footer .FooterMenu .MenuHolder
+{
+    color: #808080;
+    width: 30%;
+    float: left;
+    font-size: 10px;
+    margin: 0 10px 0 5px;
+}
+#Footer .FooterMenu .MenuHolder .MenuHeading
+{
+   font-size: 11px;
+   text-decoration: underline;
+}
+#Footer .FooterMenu .MenuHolder ul
+{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+#Footer a{color: #808080; text-decoration: underline;}
+#Footer .FooterMenu .MenuHolder .BlkWhtLogo{ width: 45%; float: right; margin-top: 14%; }
+
+#Footer p.CopyRight
+{
+    color: #808080;
+    float: left;
+    margin: 3px 0 0 10%;
+    padding: 2px;
+}
+
+.MainContent
+{
+    float: left;
+    width: 72%;
+    background: #fff;
+}
+.MainContent .PContent
+{
+    margin: 0;
+    padding: 2%;
+    overflow: hidden;
+}
+.PContent p.Pera
+{
+    color: #333;
+    font-size: 1.2em;
+    font-family: Geneva, Verdana, Sans-Serif;
+    line-height: 22px;
+}
+
+.RightBar
+{
+    float: right;
+    width: 25%;
+}
+.RightBar .UserLogin
+{
+    width: 100%;
+    height: 240px;
+    overflow: hidden;
+    text-align: center;
+    margin: 0;
+    padding-bottom: 5px;
+    background: #fff;
+}
+.RightBar .UserLogin .LogImg
+{
+    width: 85%;
+    height: 185px;
+    margin: 5px auto 0 auto;
+    background: #fff url(../images/loginIMG.jpg) no-repeat center;
+}
+.RightBar .UserLogin .LogBtn
+{
+    clear: both;
+    width: 65%;
+    margin: 10px auto 0 auto;
+    padding: 4px 5px;
+}
+.RightBar .UserLogin .LogBtn a
+{
+    color: #fff;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 5px 35px;
+    background: #0f68b3;
+    text-decoration: none;
+}
+
+.MainMenu
+{
+    float: right;
+    margin-top: 2%;
+    margin-right: 10%;
+    padding: 1px;
+    position: relative;
+}
+.MainMenu ul
+{
+    float: left;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.MainMenu ul li
+{
+    float: left;
+    padding: 5px 10px;
+    background: #052937;
+}
+.MainMenu ul li a
+{
+    float: left;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, Sans-Serif;
+    text-decoration: none;
+}
+.MainMenu ul li a:hover
+{
+    color: #23a7d8;
+}
+
+.logo
+{
+    float: left;
+    margin: 1.5% 0 1% 10.5%;
+}
+.logo img
+{
+    width: 75%; /* 140px */
+}
+
+/* Home page Ads */
+.MainContent h1
+{
+    border-bottom: 1px dotted #ddd;
+    padding-bottom: 8px;
+}
+.MainContent .AdsHolder
+{
+    width: 100%;
+    height: 340px;
+    position: relative;
+}
+.MainContent .AdsHolder img
+{
+    width: 97%;
+    height: 90%;
+    position: absolute;
+    border: 8px solid #f2f2f2;
+    left: 0;
+    top: 0;
+}
+.MainContent .ListWthCheck
+{
+    list-style: none;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+}
+.MainContent .ListWthCheck li{ overflow: hidden; margin: 0 8px; padding: 5px 0; }
+.MainContent .ListWthCheck li i
+{
+    /*opacity: 0.5;*/
+    margin-right: 6px;
+	padding: 8px 0 0 20px;
+    background: url(../images/sprite2.jpg) no-repeat;
+}
+.MainContent .ListWthCheck li i.Check{background-position: -112px -133px;}
+.MainContent .ContactHolder .ContactFindDropDown
+{
+}
+.MainContent .ContactHolder .ContactFindDropDown .List
+{
+    width: 180px;
+    margin: 0;
+    padding: 4px;
+}
+.MainContent .ContactHolder .BranchData{margin: 2% 0; background: #e0e5eb;}
+.MainContent .ContactHolder .BranchData table{color: #333; margin: 0 1%; padding: 2% 0;}
+.MainContent .ContactHolder .BranchData .Lable{font-weight: bold;}
+/* End */
+
+/* Account page .AccountTypes */
+.MainContent .AccountTypes
+{
+    display: block;
+    overflow: hidden;
+    margin-bottom: 2%;
+    padding: 0;
+    border: 1px solid #eee;
+}
+.MainContent .AccountTypes h3
+{
+    color: #fff;
+    background: #b8bcbf;
+    margin: 0;
+    padding: 5px;
+}
+.MainContent .AccountTypes span
+{
+    margin: 0 5%;
+    padding: 1% 0;
+    display: block;
+}
+/* End */
+
+/* AccountHolder */
+.MainContent .AccountHolder
+{
+    float: left;
+    width: 49%;
+    margin-right: 1%;
+    margin-bottom: 2%;
+}
+.MainContent .AccountHolder span
+{
+    margin: 0 8%;
+    padding: 1% 0;
+    display: block;
+}
+.MainContent .AccountHolder h2
+{
+    color: #fff;
+    margin: 0;
+    padding: 5px;
+}
+.MainContent .AccountHolder h2.SHeadingColor1{ background: #a4c400; }
+.MainContent .AccountHolder h2.SHeadingColor2{ background: #1ba0e1; }
+.MainContent .AccountHolder h2.SHeadingColor3{ background: #01abaa; }
+.MainContent .AccountHolder h2.SHeadingColor4{ background: #d00570; }
+.MainContent .AccountHolder h2.SHeadingColor5{ background: #eea606; }
+/* End */
+
+/* LoanHolder */
+.MainContent .LoanHolder
+{
+    display: block;
+    overflow: hidden;
+    margin-bottom: 2%;
+}
+.MainContent .LoanHolder table
+{
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+    background: #fff;
+}
+.MainContent .LoanHolder th,
+.MainContent .LoanHolder td
+{
+    text-align: left;
+    padding: 1% 5px;
+    border: 1px solid #ddd;
+}
+.MainContent .LoanHolder th{ color: #fff; background: #297fb8; font-size: 1.1em; }
+.MainContent .LoanHolder tbody tr
+{
+    color: #555;
+    font-size: 1em;
+}
+.MainContent .LoanHolder .PersonalLoanMenu ul
+{
+    float: left;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.MainContent .LoanHolder .PersonalLoanMenu ul li
+{
+    padding: 0 10px;
+}
+.MainContent .LoanHolder .PersonalLoanMenu ul li a
+{
+    color: #23a7d8;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, Sans-Serif;
+    text-decoration: none;
+}
+.MainContent .LoanHolder .PersonalLoanMenu ul li a:hover{ color: #fff; background: #8f44ab; }
+/* End */
+
+/* CardsHolder */
+.MainContent .MainCardsHolder
+{
+    display: block;
+    overflow: hidden;
+}
+.MainContent .MainCardsHolder h3
+{
+    color: #fff;
+    background: #354a5f;
+    margin: 0;
+    padding: 8px 5px;
+}
+.MainContent .MainCardsHolder .CardHolder
+{
+    float: left;
+    width: 30%;
+    height: 320px;
+    margin: 1% 1%;
+    border: 1px solid #eee;
+}
+.MainContent .MainCardsHolder .CardHolder img
+{
+    width: 90%;
+}
+.MainContent .MainCardsHolder .CardHolder h4
+{
+    color: #fff;
+    font-size: 1.2em;
+    margin: 0;
+    padding: 5px;
+    background: #297fb8;
+}
+.MainContent .MainCardsHolder .CardHolder .CardImg,
+.MainContent .MainCardsHolder .CardHolder .CardInfo,
+.MainContent .MainCardsHolder .CardHolder .CardApply
+{
+    margin: 2% 2%;
+}
+/* End */
+
+/* LoanHolder */
+.MainContent .InsuranceHolder
+{
+    display: block;
+    overflow: hidden;
+    margin-bottom: 2%;
+}
+.MainContent .InsuranceHolder table
+{
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+    background: #fff;
+}
+.MainContent .InsuranceHolder th,
+.MainContent .InsuranceHolder td
+{
+    text-align: left;
+    padding: 1% 5px;
+    border: 1px solid #ddd;
+}
+.MainContent .InsuranceHolder th{ color: #fff; background: #297fb8; font-size: 1.1em; }
+.MainContent .InsuranceHolder tbody tr{ color: #555; font-size: 1em; }
+/* End */
+
+/* For Auto Loan Eligibility Forms */
+.AutoFormContent
+{
+    width: 95%;
+    margin: 0 auto;
+    padding: 1%;
+    background: #fff;
+}
+.AutoFormContent .AutoFormHolder
+{
+    margin: 2% 0;
+    padding: 0 1%;
+    overflow: hidden;
+}
+.AutoFormContent .AutoFormHolder .FormInput
+{
+    width: 190px;
+    margin: 0;
+    padding: 4px 5px;
+}
+.AutoFormContent .AutoFormHolder .FormTextBox
+{
+    width: 178px;
+    margin: 0;
+    padding: 4px 5px;
+}
+
+.AutoFormContent .AutoFormHolder .TableHolder
+{
+    width: 49%;
+    float: left;
+    margin: 3% 0 2% 5px;
+}
+.AutoFormContent .AutoFormHolder .TableHolder table
+{
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+    background: #fff;
+}
+.AutoFormContent .AutoFormHolder .TableHolder td
+{
+    padding: 1% 5px;
+    border: 1px solid #ddd;
+}
+/* End */
+
+/* For Auto AccountFormHolder */
+.AccountFormHolder
+{
+    width: 95%;
+    min-width: 450px;
+    overflow: hidden;
+    margin: 2% auto;
+    padding: 0 auto;
+    background: #fff;
+    border: 1px solid #2980b6;
+}
+.AccountFormHolder .FormHead
+{
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    padding: 12px 4px;
+    background: #2980b6;
+}
+.AccountFormHolder .Label 
+{
+    color: #444;
+    text-align: right;
+    font-weight: bold;
+}
+.AccountFormHolder .FormTableOne
+{
+    float: left;
+    margin: 8px 2px 4px 6%;
+    padding: 8px 5px;
+}
+.AccountFormHolder .FormTableTwo
+{
+    float: right;
+    margin: 8px 10px 4px 2px;
+    padding: 8px 5px;
+}
+.AccountFormHolder .FormButton{ clear: both; overflow: hidden; background: #5da3d3; }
+.AccountFormHolder .FormButton .SubmitBtn{ float: right; margin: 8px 15px; }
+/* End */
+
+/* CustomerFormContent */
+#FormContent .CustomerFormContent
+{
+    width: 55%;
+    margin: 0 auto;
+    padding: 1%;
+    background: #fff;
+}
+#FormContent .CustomerFormContent h1
+{
+    color: #444;
+    padding: 2% 4%;
+    border-bottom: 1px dotted #ddd;
+}
+#FormContent .CustomerFormHolder
+{
+    margin: 1% 2%;
+    padding: 1%;
+}
+#FormContent .CustomerFormHolder .Lable
+{
+    color: #333;
+    width: 20%;
+    font-weight: bold;
+    text-align: right;
+    padding-right: 5px;
+}
+#FormContent .CustomerFormHolder .InputText
+{
+    width: 190px;
+    margin: 0;
+    padding: 1.5% 1%;
+}
+/* End */
+
+/* Customers style */
+.RightBar .UserMenu{ overflow: hidden; display: block; background: #fff;}
+.RightBar .UserMenu .UserMenuHolder{ margin-left: 8px; padding: 4px 5px;}
+.RightBar .UserMenu .MenuHead{ font-size: 14px; font-weight: bold; background: #ddd; padding: 5px 8px;}
+.RightBar .UserMenu ul{ list-style: none; margin: 0; padding: 0;}
+.RightBar .UserMenu ul li{ padding: 5px 0;}
+
+.MainContent .CustDataHolder h3{color: #23a7d8;}
+.MainContent .CustDataHolder table{width: 100%; border-collapse: collapse; margin: 2% auto;}
+.MainContent .CustDataHolder table th{color: #333; text-align: left; padding: 10px 5px; border: 1px solid #ddd; background: #f2f2f2;}
+.MainContent .CustDataHolder table td{text-align: left; padding: 8px 5px; border: 1px solid #ddd;}
+
+.MainContent .CustChangePass .InputText{ width: 165px; padding: 5px 6px; border: 1px solid #95d7f0;}
+
+.MainContent .CustMobRchrg .InputText{ width: 165px; padding: 5px 6px; border: 1px solid #95d7f0;}
+.MainContent .CustMobRchrg .DrpDwnList{ width: 179px; padding: 5px 6px; border: 1px solid #95d7f0;}
+
+.MainContent .CustBillPay .InputText{ width: 165px; padding: 5px 6px; border: 1px solid #95d7f0;}
+/* End */

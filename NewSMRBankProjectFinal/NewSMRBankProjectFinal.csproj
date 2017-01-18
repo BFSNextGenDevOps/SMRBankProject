@@ -1,0 +1,568 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F6EF3855-FAE9-49F1-9956-15E5E4FDB188}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NewSMRBankProjectFinal</RootNamespace>
+    <AssemblyName>NewSMRBankProjectFinal</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\AddStateCity.aspx" />
+    <Content Include="Admin\Admin.aspx" />
+    <Content Include="Admin\AdminLogin.aspx" />
+    <Content Include="Admin\AdminLogout.aspx" />
+    <Content Include="Admin\approve_cust.aspx" />
+    <Content Include="Admin\CodeGenerator.aspx" />
+    <Content Include="Admin\customers.aspx" />
+    <Content Include="Admin\Default.aspx" />
+    <Content Include="Admin\netbnkng_req.aspx" />
+    <Content Include="Admin\Settings.aspx" />
+    <Content Include="App_Data\SMRBankDB.mdf" />
+    <Content Include="App_Data\SMRBankDB_log.ldf">
+      <DependentUpon>SMRBankDB.mdf</DependentUpon>
+    </Content>
+    <Content Include="Images\ads\ads001.jpg" />
+    <Content Include="Images\ads\ads002.jpg" />
+    <Content Include="Images\ads\ads003.jpg" />
+    <Content Include="Images\ads\ads004.jpg" />
+    <Content Include="Images\BG.gif" />
+    <Content Include="Images\Calendar.gif" />
+    <Content Include="Images\favicon.ico" />
+    <Content Include="Images\female.png" />
+    <Content Include="Images\headerBG4.jpg" />
+    <Content Include="Images\loginIMG.jpg" />
+    <Content Include="Images\male.png" />
+    <Content Include="Images\robot.png" />
+    <Content Include="Images\SMR-logo4.png" />
+    <Content Include="Images\SMR-logo4BlackWhite.png" />
+    <Content Include="JavaScript\jquery-1.7.2.min.js" />
+    <Content Include="JavaScript\jquery.min.js" />
+    <Content Include="Products\Cards\Card_eligibility.aspx" />
+    <Content Include="Products\Cards\imgs\business_card.jpg" />
+    <Content Include="Products\Cards\imgs\gold_card.jpg" />
+    <Content Include="Products\Cards\imgs\InfiniteCard.jpg" />
+    <Content Include="Products\Cards\imgs\mastercard.jpg" />
+    <Content Include="Products\Cards\imgs\mywings.jpg" />
+    <Content Include="Products\Cards\imgs\myzone.jpg" />
+    <Content Include="Products\Cards\imgs\platinum_mastercard.jpg" />
+    <Content Include="Products\Cards\imgs\signature_card.jpg" />
+    <Content Include="Products\Cards\imgs\titanium-card.jpg" />
+    <Content Include="Products\Cards\SavingsAcc.aspx" />
+    <Content Include="Products\Insurances\Healthrakshapoli.aspx" />
+    <Content Include="Products\Insurances\LifeInsurance.aspx" />
+    <Content Include="Products\Loans\Autoloancalc.aspx" />
+    <Content Include="Products\Loans\AutoLoanMainForm.aspx" />
+    <Content Include="Products\Loans\Demo.aspx" />
+    <Content Include="Products\Loans\GoldLoan.aspx" />
+    <Content Include="Products\Loans\HomeLoan.aspx" />
+    <Content Include="Products\Loans\noteligible.aspx" />
+    <Content Include="Products\Loans\PersonalLoan.aspx" />
+    <Content Include="Products\Loans\PersonalLoanCalc.aspx" />
+    <Content Include="Products\Loans\plcal.aspx" />
+    <Content Include="Products\Loans\TwowheelerEligible.aspx" />
+    <Content Include="Products\Loans\TwowheelerLoan.aspx" />
+    <Content Include="Products\Loans\Twowheeler_reg.aspx" />
+    <Content Include="Styles\AdminPanal.css" />
+    <Content Include="Styles\enhancements.css" />
+    <Content Include="Styles\MainStyle.css" />
+    <Content Include="Web.config" />
+    <Content Include="About_us.aspx" />
+    <Content Include="Accounts.aspx" />
+    <Content Include="Contact_us.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Loans.aspx" />
+    <Content Include="MainInsurance.aspx" />
+    <Content Include="NetBanking.aspx" />
+    <Content Include="Products\Accounts\Account_form.aspx" />
+    <Content Include="Products\Accounts\Current_accounts.aspx" />
+    <Content Include="Products\Accounts\deposits.aspx" />
+    <Content Include="Products\Accounts\salary_accounts.aspx" />
+    <Content Include="Products\Accounts\Savings_account.aspx" />
+    <Content Include="Products\Apply\net_banking.aspx" />
+    <Content Include="Products\Cards\CreditCards.aspx" />
+    <Content Include="Products\Cards\DebitCards.aspx" />
+    <Content Include="Products\Cards\notEligible.aspx" />
+    <Content Include="Customer\cust_login.aspx" />
+    <Content Include="Customer\CustChngPass.aspx" />
+    <Content Include="Customer\CustLogout.aspx" />
+    <Content Include="Customer\DefaultCust.aspx" />
+    <Content Include="Customer\LghtBillPay.aspx" />
+    <Content Include="Customer\MobRechrg.aspx" />
+    <Content Include="Admin\account_request.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\account_request.aspx.cs">
+      <DependentUpon>account_request.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\account_request.aspx.designer.cs">
+      <DependentUpon>account_request.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="clsAdmin.cs" />
+    <Compile Include="Branches.cs" />
+    <Compile Include="Connections.cs" />
+    <Compile Include="Customers.cs" />
+    <Compile Include="CustReq.cs" />
+    <Compile Include="NetBanking.cs" />
+    <Compile Include="SMRGeneral.cs" />
+    <Compile Include="StatesCities.cs" />
+    <Compile Include="Transactions.cs" />
+    <Compile Include="Admin\AddStateCity.aspx.cs">
+      <DependentUpon>AddStateCity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AddStateCity.aspx.designer.cs">
+      <DependentUpon>AddStateCity.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Admin.aspx.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Admin.aspx.designer.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminLogin.aspx.cs">
+      <DependentUpon>AdminLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminLogin.aspx.designer.cs">
+      <DependentUpon>AdminLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminLogout.aspx.cs">
+      <DependentUpon>AdminLogout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminLogout.aspx.designer.cs">
+      <DependentUpon>AdminLogout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\approve_cust.aspx.cs">
+      <DependentUpon>approve_cust.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\approve_cust.aspx.designer.cs">
+      <DependentUpon>approve_cust.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\CodeGenerator.aspx.cs">
+      <DependentUpon>CodeGenerator.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\CodeGenerator.aspx.designer.cs">
+      <DependentUpon>CodeGenerator.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\customers.aspx.cs">
+      <DependentUpon>customers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\customers.aspx.designer.cs">
+      <DependentUpon>customers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\netbnkng_req.aspx.cs">
+      <DependentUpon>netbnkng_req.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\netbnkng_req.aspx.designer.cs">
+      <DependentUpon>netbnkng_req.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Settings.aspx.cs">
+      <DependentUpon>Settings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Settings.aspx.designer.cs">
+      <DependentUpon>Settings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage.Master.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage.Master.designer.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage4Forms.Master.cs">
+      <DependentUpon>MasterPage4Forms.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage4Forms.Master.designer.cs">
+      <DependentUpon>MasterPage4Forms.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPageForAdmins.Master.cs">
+      <DependentUpon>MasterPageForAdmins.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPageForAdmins.Master.designer.cs">
+      <DependentUpon>MasterPageForAdmins.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Products\Cards\Card_eligibility.aspx.cs">
+      <DependentUpon>Card_eligibility.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Products\Cards\Card_eligibility.aspx.designer.cs">
+      <DependentUpon>Card_eligibility.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Products\Cards\SavingsAcc.aspx.cs">
+      <DependentUpon>SavingsAcc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Products\Cards\SavingsAcc.aspx.designer.cs">
+      <DependentUpon>SavingsAcc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Products\Insurances\Healthrakshapoli.aspx.cs">
+      <DependentUpon>Healthrakshapoli.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Products\Insurances\Healthrakshapoli.aspx.designer.cs">
+      <DependentUpon>Healthrakshapoli.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Products\Insurances\LifeInsurance.aspx.cs">
+      <DependentUpon>LifeInsurance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Products\Insurances\LifeInsurance.aspx.designer.cs">
+      <DependentUpon>LifeInsurance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Products\Loans\Autoloancalc.aspx.cs">
+      <DependentUpon>Autoloancalc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Products\Loans\Autoloancalc.aspx.designer.cs">
+      <DependentUpon>Autoloancalc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Products\Loans\AutoLoanMainForm.aspx.cs">
+      <DependentUpon>AutoLoanMainForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Products\Loans\AutoLoanMainForm.aspx.designer.cs">
+      <DependentUpon>AutoLoanMainForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Products\Loans\Demo.aspx.cs">
+      <DependentUpon>Demo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Products\Loans\Demo.aspx.designer.cs">
+      <DependentUpon>Demo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Products\Loans\GoldLoan.aspx.cs">
+      <DependentUpon>GoldLoan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Products\Loans\GoldLoan.aspx.designer.cs">
+      <DependentUpon>GoldLoan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Products\Loans\HomeLoan.aspx.cs">
+      <DependentUpon>HomeLoan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Products\Loans\HomeLoan.aspx.designer.cs">
+      <DependentUpon>HomeLoan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Products\Loans\noteligible.aspx.cs">
+      <DependentUpon>noteligible.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Products\Loans\noteligible.aspx.designer.cs">
+      <DependentUpon>noteligible.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Products\Loans\PersonalLoan.aspx.cs">
+      <DependentUpon>PersonalLoan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Products\Loans\PersonalLoan.aspx.designer.cs">
+      <DependentUpon>PersonalLoan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Products\Loans\PersonalLoanCalc.aspx.cs">
+      <DependentUpon>PersonalLoanCalc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Products\Loans\PersonalLoanCalc.aspx.designer.cs">
+      <DependentUpon>PersonalLoanCalc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Products\Loans\plcal.aspx.cs">
+      <DependentUpon>plcal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Products\Loans\plcal.aspx.designer.cs">
+      <DependentUpon>plcal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Products\Loans\TwowheelerEligible.aspx.cs">
+      <DependentUpon>TwowheelerEligible.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Products\Loans\TwowheelerEligible.aspx.designer.cs">
+      <DependentUpon>TwowheelerEligible.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Products\Loans\TwowheelerLoan.aspx.cs">
+      <DependentUpon>TwowheelerLoan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Products\Loans\TwowheelerLoan.aspx.designer.cs">
+      <DependentUpon>TwowheelerLoan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Products\Loans\Twowheeler_reg.aspx.cs">
+      <DependentUpon>Twowheeler_reg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Products\Loans\Twowheeler_reg.aspx.designer.cs">
+      <DependentUpon>Twowheeler_reg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="About_us.aspx.cs">
+      <DependentUpon>About_us.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About_us.aspx.designer.cs">
+      <DependentUpon>About_us.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accounts.aspx.cs">
+      <DependentUpon>Accounts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accounts.aspx.designer.cs">
+      <DependentUpon>Accounts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contact_us.aspx.cs">
+      <DependentUpon>Contact_us.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact_us.aspx.designer.cs">
+      <DependentUpon>Contact_us.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Loans.aspx.cs">
+      <DependentUpon>Loans.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Loans.aspx.designer.cs">
+      <DependentUpon>Loans.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainInsurance.aspx.cs">
+      <DependentUpon>MainInsurance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainInsurance.aspx.designer.cs">
+      <DependentUpon>MainInsurance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NetBanking.aspx.cs">
+      <DependentUpon>NetBanking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NetBanking.aspx.designer.cs">
+      <DependentUpon>NetBanking.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Products\Accounts\Account_form.aspx.cs">
+      <DependentUpon>Account_form.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Products\Accounts\Account_form.aspx.designer.cs">
+      <DependentUpon>Account_form.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Products\Accounts\Current_accounts.aspx.cs">
+      <DependentUpon>Current_accounts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Products\Accounts\Current_accounts.aspx.designer.cs">
+      <DependentUpon>Current_accounts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Products\Accounts\deposits.aspx.cs">
+      <DependentUpon>deposits.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Products\Accounts\deposits.aspx.designer.cs">
+      <DependentUpon>deposits.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Products\Accounts\salary_accounts.aspx.cs">
+      <DependentUpon>salary_accounts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Products\Accounts\salary_accounts.aspx.designer.cs">
+      <DependentUpon>salary_accounts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Products\Accounts\Savings_account.aspx.cs">
+      <DependentUpon>Savings_account.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Products\Accounts\Savings_account.aspx.designer.cs">
+      <DependentUpon>Savings_account.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Products\Apply\net_banking.aspx.cs">
+      <DependentUpon>net_banking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Products\Apply\net_banking.aspx.designer.cs">
+      <DependentUpon>net_banking.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Products\Cards\CreditCards.aspx.cs">
+      <DependentUpon>CreditCards.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Products\Cards\CreditCards.aspx.designer.cs">
+      <DependentUpon>CreditCards.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Products\Cards\DebitCards.aspx.cs">
+      <DependentUpon>DebitCards.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Products\Cards\DebitCards.aspx.designer.cs">
+      <DependentUpon>DebitCards.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Products\Cards\notEligible.aspx.cs">
+      <DependentUpon>notEligible.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Products\Cards\notEligible.aspx.designer.cs">
+      <DependentUpon>notEligible.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\cust_login.aspx.cs">
+      <DependentUpon>cust_login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\cust_login.aspx.designer.cs">
+      <DependentUpon>cust_login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\CustChngPass.aspx.cs">
+      <DependentUpon>CustChngPass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\CustChngPass.aspx.designer.cs">
+      <DependentUpon>CustChngPass.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\CustLogout.aspx.cs">
+      <DependentUpon>CustLogout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\CustLogout.aspx.designer.cs">
+      <DependentUpon>CustLogout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\DefaultCust.aspx.cs">
+      <DependentUpon>DefaultCust.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\DefaultCust.aspx.designer.cs">
+      <DependentUpon>DefaultCust.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\LghtBillPay.aspx.cs">
+      <DependentUpon>LghtBillPay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\LghtBillPay.aspx.designer.cs">
+      <DependentUpon>LghtBillPay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\MobRechrg.aspx.cs">
+      <DependentUpon>MobRechrg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\MobRechrg.aspx.designer.cs">
+      <DependentUpon>MobRechrg.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MasterPage.Master" />
+    <Content Include="MasterPageForAdmins.Master" />
+    <Content Include="MasterPage4Forms.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>27174</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:26887/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

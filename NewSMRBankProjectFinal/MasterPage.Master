@@ -1,0 +1,170 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="NewSMRBankProjectFinal.MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>SMR Bank</title>
+
+    <link rel="Stylesheet" href="Styles/MainStyle.css" type="text/css" media="screen" />
+    <link rel="Stylesheet" href="Styles/enhancements.css" type="text/css" media="screen" />
+    <link rel="Shortcut Icon" href="images/favicon.ico" type="image/x-icon" />
+
+    <script type="text/javascript" src="JavaScript/jquery-1.7.2.min.js"></script>
+    <%--<script type="text/javascript">
+        function mainmenu() {
+            $(" .nav ul ").css({ display: "none" }); // Opera fix
+            $(" .nav li ").hover(function () {
+                $(this).find('ul:first').css({ visibility: "visible", display: "none" }).show(400);
+            }
+            , function () {
+                $(this).find('ul:first').css({ visibility: "hidden" });
+            });
+        }
+        $(document).ready(function () {
+            mainmenu();
+        });
+    </script>--%>
+    <script type="text/javascript">
+        $(function () {
+            $('.AdsHolder img:gt(0)').hide();
+            setInterval(function () {
+                $('.AdsHolder :first-child').fadeOut().next('img').fadeIn().end().appendTo('.AdsHolder');
+            }, 4000);
+        });
+    </script>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="Wrapper">
+        <div id="Header">
+            <div class="logo"><a id="A1" href="~/Default.aspx" runat="server"><img id="Img1" alt="SMR Bank" src="~/images/SMR-logo4.png" border="0" runat="server" /></a><span style="display: block; margin-top: 3px; color: #f2f2f2;">Best Bank Best Customer Service</span></div>
+            <div class="MainMenu">
+                <asp:Menu ID="Menu1" CssClass="menu" runat="server" Orientation="Horizontal">
+                    <Items>
+                        <asp:MenuItem Text="Home" Value="Home" NavigateUrl="Default.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Products" Value="Products">
+                            <asp:MenuItem Text="Accounts" Value="Accounts" 
+                                NavigateUrl="~/accounts.aspx">
+                                <asp:MenuItem Text="Saving Account" Value="Saving Account" NavigateUrl="Products/Accounts/savings_account.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Salary Account" Value="Salary Account" NavigateUrl="Products/Accounts/salary_accounts.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Current Account" Value="Current Account" NavigateUrl="Products/Accounts/current_accounts.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Deposits" Value="Deposits" NavigateUrl="Products/Accounts/deposits.aspx"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Loans" Value="Loans" NavigateUrl="loans.aspx">
+                                <asp:MenuItem Text="Gold Loan" Value="Gold Loan" NavigateUrl="Products/Loans/GoldLoan.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Home Loan" Value="Home Loan" NavigateUrl="Products/Loans/HomeLoan.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Personal Loan" Value="Personal Loan" NavigateUrl="Products/Loans/PersonalLoan.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Two Wheeler Loan" Value="Two Wheeler Loan" NavigateUrl="Products/Loans/TwoWheelerLoan.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Auto Loan" Value="Auto Loan" NavigateUrl="Products/Loans/AutoLoanMainForm.aspx"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Cards" Value="Cards" Selectable="False">
+                                <asp:MenuItem Text="Credit Cards" Value="Credit Cards" NavigateUrl="Products/Cards/CreditCards.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Debit Cards" Value="Debit Cards" NavigateUrl="Products/Cards/DebitCards.aspx"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Insurance" Value="Insurance" NavigateUrl="MainInsurance.aspx">
+                                <asp:MenuItem Text="Life Insurance" Value="Life Insurance" NavigateUrl="Products/Insurance/LifeInsurance.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Health Raksha Policy" Value="Health Raksha Policy" NavigateUrl="Products/Insurance/helthrakshapoli.aspx">
+                                </asp:MenuItem>
+                            </asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Apply Now" Value="Apply Now">
+                            <asp:MenuItem Text="Personal Loan" Value="Personal Loan" NavigateUrl="Products/Loans/Demo.aspx?value=Personal Loan"></asp:MenuItem>
+                            <asp:MenuItem Text="Home Loan" Value="Home Loan" NavigateUrl="Products/Loans/Demo.aspx?value=Home Loan"></asp:MenuItem>
+                            <asp:MenuItem Text="Gold Loan" Value="Gold Loan" NavigateUrl="Products/Loans/Demo.aspx?value=Gold Loan"></asp:MenuItem>
+                            <asp:MenuItem Text="Savings Account" Value="Savings Account"></asp:MenuItem>
+                            <asp:MenuItem Text="Salary Accounts" Value="New Item"></asp:MenuItem>
+                            <asp:MenuItem Text="Current Accounts" Value="New Item"></asp:MenuItem>
+                            <asp:MenuItem Text="Life Insurance" Value="New Item" NavigateUrl="Products/Loans/Demo.aspx?value=Life Insurance"></asp:MenuItem>
+                            <asp:MenuItem Text="Auto Loan" Value="New Item" NavigateUrl="Products/Loans/Demo.aspx?value=Auto Loan"></asp:MenuItem>
+                            <asp:MenuItem Text="Two Wheeler Loan" Value="Two Wheeler Loan" NavigateUrl="Products/Loans/Demo.aspx?value=Two Wheeler Loan"></asp:MenuItem>
+                            <asp:MenuItem Text="Card" Value="Card" NavigateUrl="~/Products/Loans/Demo.aspx?value=Card"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="About Us" Value="About Us" NavigateUrl="about_us.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Contact Us" Value="Contact Us" NavigateUrl="contact_us.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Net Banking" Value="Net Banking" NavigateUrl="netbanking.aspx"></asp:MenuItem>
+                    </Items>
+                </asp:Menu>
+            </div>
+        </div>
+        <div id="Content">
+            <div class="MainContent">
+                <div class="PContent">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+            <div class="RightBar">
+                <%
+                    if (Session["Cust_Id"] == null)
+                    {
+                %>
+                <div class="UserLogin">
+                    <div class="LogImg"></div>
+                    <div class="LogBtn"><a id="A2" href="~/customer/cust_login.aspx" runat="server">Click here</a></div>
+                </div>
+                <% } else {
+                       NewSMRBankProjectFinal.Customers CustDataById = NewSMRBankProjectFinal.Customers.GetAll_CustDataById(Convert.ToInt32(Session["Cust_Id"]));
+                        string CustFullName = CustDataById.Fname + " " + CustDataById.Mname + " " + CustDataById.Lname;
+                %>
+                <div class="UserMenu">
+                    <div class="MenuHead">Welcome</div>
+                    <div class="UserMenuHolder">
+                        <p><b><% Response.Write(CustFullName); %></b></p>
+                        <table cellpadding="4">
+                            <tbody>
+                                <tr>
+                                    <td>A/c Type :</td>
+                                    <td><% Response.Write(CustDataById.Acc_type); %></td>
+                                </tr>
+                                <tr>
+                                    <td>A/c No. :</td>
+                                    <td><% Response.Write(CustDataById.Acc_No); %></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="UserMenu">
+                    <div class="MenuHead">Menu</div>
+                    <div class="UserMenuHolder">
+                        <ul>
+                            <li><a id="A3" href="~/customer/Default.aspx" runat="server">Account Statement</a></li>
+                            <li><a id="A4" href="~/customer/MobRechrg.aspx" runat="server">Mobile Recharge</a></li>
+                            <li><a id="A5" href="~/customer/LghtBillPay.aspx" runat="server">Bill Payment</a></li>
+                            <li><a id="A6" href="~/customer/CustChngPass.aspx" runat="server">Change Password</a></li>
+                            <li><a id="A7" href="~/customer/CustLogout.aspx" runat="server">Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <% } %>
+            </div>
+        </div>
+        <div id="Footer">
+            <div class="FooterMenu">
+                <div class="MenuHolder">
+                    <p class="MenuHeading">SMR Bank</p>
+                    SMR Bank began operations in 2014 with a simple mission: to be a "World-class Indian Bank".
+                    We realised that only a single-minded focus on product quality and service excellence would help us get there.
+                    Today, we are proud to say that we are well on our way towards that goal.
+                </div>
+                <div class="MenuHolder">
+                    <p class="MenuHeading">What you'll need to complete your application?</p>
+                    <ul>
+                        <li>Applicant & Co-applican's address details</li>
+                        <li>PAN card (if available)</li>
+                        <li>Scanned copy of your identity & address proof (if available)</li>
+                        <li>Details entered in application should match your documents</li>
+                    </ul>
+                </div>
+                <div class="MenuHolder">
+                    <img id="Img2" class="BlkWhtLogo" alt="SMR Bank" src="~/images/SMR-logo4BlackWhite.png" border="0" runat="server" />
+                </div>
+            </div>
+            <p class="CopyRight">&copy <% Response.Write(DateTime.Now.Year); %>&nbsp; <a id="A8" href="~/Default.aspx" runat="server">SMR Bank</a> Ltd. All rights reserved. &nbsp;&nbsp;&nbsp; <a id="A9" href="~/Admin/Default.aspx" runat="server">Admin</a></p>
+        </div>
+    </div>
+    </form>
+</body>
+</html>

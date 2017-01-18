@@ -1,0 +1,306 @@
+﻿/* SMR Bank StyleSheet For Admin Panal */
+body
+{
+    color: #000035;
+    background: #f2f2f2;
+    font-size: 12px;
+    font-family: 'Lucida Bright' , Tahoma, Verdana, Arial, Sans-Serif;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+html, body{ height: 100%; }
+a:link, a:visited{ color: #0074a2; text-decoration: none; }
+a:hover{ text-decoration: underline; }
+
+#AdminWrap
+{
+}
+#AdminHeader
+{
+    color: #ddd;
+    height: 47px;
+    top: 0;
+    right: 0;
+    left: 0;
+    position: absolute;
+    background: #070707;
+    padding: 2px;
+}
+#AdminHeader span a
+{
+    color: #ddd;
+    font-size: 1.2em;
+    margin: 1% 5%;
+    padding: 2px;
+    text-decoration: none;
+}
+
+#AdminHeader .HeaderLeft
+{
+    float: left;
+    width: 10%;
+    min-width: 160px;
+    margin: 0.5% 3%;
+    padding: 2px;
+}
+#AdminHeader .HeaderLeft .icon-web
+{
+    width: 20px;
+    height: 19px;
+    top: 3px;
+    display: inline-block;
+    position: relative;
+    background: url(../images/sprite3.png) no-repeat;
+    background-position: -89px -237px;
+}
+#AdminHeader .HeaderRight
+{
+    float: right;
+    text-align: left;
+    margin: 0.5% 3%;
+    padding: 2px;
+}
+#AdminHeader .HeaderRight .icon-user
+{
+    width: 20px;
+    height: 20px;
+    top: 2px;
+    left: 5px;
+    display: inline-block;
+    position: relative;
+    background: url(../images/sprite3.png) no-repeat;
+    background-position: -27px -277px;
+}
+#AdminHeader .HeaderRight .icon-msg
+{
+    width: 20px;
+    height: 20px;
+    top: 3px;
+    left: 5px;
+    display: inline-block;
+    position: relative;
+    background: url(../images/sprite3.png) no-repeat;
+    background-position: -306px -277px;
+}
+#AdminLeftMenu
+{
+    width: 15%;
+    max-width: 200px;
+    min-width: 200px;
+    overflow: auto;
+    position: absolute;
+    background: #070707;
+    padding: 2px 0 0 2px;
+    top: 50px;
+    left: 0;
+    bottom: 0;
+}
+#AdminLeftMenu ul
+{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+#AdminLeftMenu ul li a
+{
+    color: #ddd;
+    display: block;
+    outline: none;
+    padding: 1em 1em 1em 2em;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #222; /* #124153 */
+}
+#AdminLeftMenu ul li:first-child a{ border-top: 1px solid #222; }
+#AdminLeftMenu ul a:hover{ color: #fff; background: #0074a2; }
+#AdminLeftMenu ul li.Current{ background: #0074a2; }
+#AdminContent
+{
+    top: 50px;
+    right: 0;
+    left: 200px;
+    bottom: 0;
+    overflow: auto;
+    position: absolute;
+    padding: 1%;
+}
+#AdminFooter
+{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* For Forms */
+#FormContent
+{
+    width: 80%;
+    min-width: 900px;
+    overflow: hidden;
+    margin: 1% auto;
+    padding: 0 auto;
+}
+.AdminFormContent
+{
+    width: 60%;
+    margin: 0 auto;
+    padding: 1%;
+    background: #fff;
+}
+.AdminFormContent h1
+{
+    padding: 2% 4%;
+    border-bottom: 1px dotted #333;
+}
+.AdminFormContent .AdminFormHolder
+{
+    margin: 1% 2%;
+    padding: 1%;
+}
+.AdminFormContent .AdminFormHolder table
+{
+    width: 100%;
+    border-collapse: collapse;
+}
+.AdminFormContent .AdminFormHolder .Lable
+{
+    width: 16%;
+    font-weight: bold;
+    text-align: right;
+    padding-right: 5px;
+}
+.AdminFormContent .AdminFormHolder .Input
+{
+    width: 38%;
+}
+.AdminFormContent .AdminFormHolder .InputText
+{
+    width: 95%;
+    padding: 2%;
+}
+/* End */
+
+/* Admin Settings Page */
+#AdminContent .SettingHolder{ width: 100%; height: 954px; }
+.SettingHolder .ChangePassForm
+{
+    width: 45%;
+    min-width: 400px;
+    margin: 0;
+    padding: 2%;
+    overflow: hidden;
+    background: #fff;
+    border: 2px solid #eee;
+}
+.SettingHolder .ChangePassForm .FormHead
+{
+    color: #444;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 6px 0;
+    border-bottom: 1px dotted #eee;
+ }
+.SettingHolder .ChangePassForm .FormRow
+{
+    display: block;
+    overflow: hidden;
+    margin: 4% 0;
+}
+.SettingHolder .ChangePassForm .FormLabel
+{
+    color: #333;
+    float: left;
+    width: 30%;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 0;
+    padding: 1px;
+}
+.SettingHolder .ChangePassForm .FormInput
+{
+    float: left;
+    width: 66%;
+    margin: 0 0 0 4px;
+    padding: 2px;
+}
+.SettingHolder .ChangePassForm .FormButton{ margin-left: 31.5%; }
+/* End */
+
+/* StateFormHolder */
+#AdminContent .AdminMenuTwo{ width: 100%; background: #fff; margin-bottom: 1%; padding: 4px; overflow: hidden; }
+#AdminContent .AdminMenuTwo ul{ list-style: none; margin: 0; padding: 0; }
+#AdminContent .AdminMenuTwo ul li a
+{
+    float: left;
+    color: #444;
+    padding: 1em 1em 1em 2em;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+#AdminContent .AdminMenuTwo ul li a:hover{ color: #0074a2; text-decoration: underline;}
+#AdminContent .DataHolder{ width: 100%; min-width: 650px; background: #fff; margin-bottom: 1%; padding: 4px; overflow: hidden; }
+#AdminContent .DataHolder .Head{ width: 100%; color: #333; border-bottom: 2px dotted #eee; }
+#AdminContent .DataHolder .DataTable{ margin: 2% 0; }
+#AdminContent .DataHolder table{ width: 100%; border-collapse: collapse; }
+#AdminContent .DataHolder th,
+#AdminContent .DataHolder td
+{
+    color: #444;
+    text-align: left;
+    padding: 1% 5px;
+    border: 1px solid #ddd;
+}
+#AdminContent .StateFormHolder{ display: block; width: 40%; min-width: 400px; background: #fff; margin-bottom: 4%; }
+#AdminContent .StateFormHolder .FormRow
+{
+    display: block;
+    overflow: hidden;
+    margin-bottom: 5px;
+    padding: 10px;
+}
+#AdminContent .StateFormHolder .FormLabel{ float: left; width: 110px; line-height: 25px; }
+#AdminContent .StateFormHolder .FormInput{ float: left; width: 70%; }
+#AdminContent .StateFormHolder .FormButton
+{
+    clear: both;
+    overflow: hidden;
+    padding: 2% 2%;
+    background: #fafafa;
+}
+#AdminContent .StateFormHolder .StateAddBtn{ float: right; }
+#AdminContent .StateFormHolder .FormHead
+{
+    color: #444;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 6px 10px;
+    border-bottom: 1px dotted #eee;
+}
+#AdminContent .StateFormHolder .FormTextBox{ width: 170px; padding: 4px 3px; }
+#AdminContent .StateFormHolder .FormList{ width: 177px; padding: 4px 3px; }
+/* End */
+
+/* CustomerInfo */
+#AdminContent .CustomerInfo
+{
+    color: Red;
+    width: 50%;
+    margin: 0;
+    padding: 2px 1%;
+    background: #fff;
+}
+#AdminContent .CustomerDetail
+{
+    width: 100%;
+    margin: 2% 0;
+    padding: 0;
+    background: #fff;
+}
+#AdminContent .CustomerDetail .DetailHolder{ padding-bottom: 5px;}
+#AdminContent .CustomerDetail .DetailHolder h4{ color: #fff; background: #2b82b8; padding: 6px 8px; font-size: 14px; }
+#AdminContent .CustomerDetail .DetailHolder table{ width: 99%; border-collapse: collapse; margin: 0 auto;}
+#AdminContent .CustomerDetail .DetailHolder table th{ text-align: left; padding: 4px 5px; border-bottom: 1px solid #eee;}
+#AdminContent .CustomerDetail .DetailHolder table td{ text-align: left; padding: 8px 5px; border: 1px solid #eee;}
+/* End */

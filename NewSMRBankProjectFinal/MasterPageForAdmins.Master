@@ -1,0 +1,47 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPageForAdmins.master.cs" Inherits="NewSMRBankProjectFinal.MasterPageForAdmins" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Admin Panal - SMR Bank</title>
+    <link rel="stylesheet" href="Styles/AdminPanal.css" type="text/css" />
+    <link rel="Shortcut Icon" href="images/favicon.ico" type="image/x-icon" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="AdminWrap">
+        <div id="AdminHeader">
+        <%
+            NewSMRBankProjectFinal.clsAdmin Admindata =NewSMRBankProjectFinal.Connections.GetData((int)Session["id"]);
+            String AdminName = Admindata.FirstName;
+        %>
+        <div class="HeaderLeft"><i class="icon-web"></i><span><a id="A1" href="Default.aspx" target="_blank" runat="server">SMR Bank</a></span></div>
+        <div class="HeaderRight">Hello <%Response.Write(AdminName);%> <i class="icon-user"></i></div>
+        </div>
+        <div id="AdminLeftMenu">
+            <%
+                String URL = HttpContext.Current.Request.Url.AbsoluteUri;
+                String fileName = System.IO.Path.GetFileName(URL);
+                
+            %>
+            <ul>
+                <li class="<% if(fileName == "Default.aspx"){Response.Write("Current");}else{} %>"><a id="A2" href="~/Admin/Default.aspx" runat="server">Dashboard</a></li>
+                <li class="<% if(fileName == "customers.aspx"){Response.Write("Current");}else{} %>"><a id="A3" href="~/Admin/customers.aspx" runat="server">Customers</a></li>
+                <li class="<% if(fileName == "account_request.aspx"){Response.Write("Current");}else{} %>"><a id="A4" href="~/Admin/account_request.aspx" runat="server">Account Request</a></li>
+                <li class="<% if(fileName == "netbnkng_req.aspx"){Response.Write("Current");}else{} %>"><a id="A5" href="~/Admin/netbnkng_req.aspx" runat="server">NetBanking Request</a></li>
+                <%--<li><a href="#">Loans Request</a></li>
+                <li><a href="#">Cards Request</a></li>--%>
+                <li class="<% if(fileName == "settings.aspx"){Response.Write("Current");}else{} %>"><a id="A6" href="~/Admin/settings.aspx" runat="server">Settings</a></li>
+                <li><a id="A7" href="~/Admin/AdminLogout.aspx" runat="server">Logout</a></li>
+            </ul>
+        </div>
+        <div id="AdminContent">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+            <div id="AdminFooter"></div>
+        </div>
+    </div>
+    </form>
+</body>
+</html>
